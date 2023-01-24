@@ -553,7 +553,7 @@ class DataUtils(commands.Cog):
 
     @commands.command()
     @commands.guild_only()
-    async def rolemembers(self, ctx, *, role: discord.Role):
+    async def durolemembers(self, ctx, *, role: discord.Role):
         """Get list of members that has provided role"""
         memberslist = [(m.id, str(m)) for m in sorted(role.members, key=lambda m: m.joined_at)]
         if not memberslist:
